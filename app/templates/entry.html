@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <h2>Entry Kiosk</h2>
+    <p>Simulate a vehicle arriving at the entry barrier.</p>
+    
+    <div class="kiosk-card">
+        <div class="camera-feed-mock">
+            [ANPR Camera Feed]
+        </div>
+        
+        <div class="form-group">
+            <label for="plateInput">Simulated Plate Number:</label>
+            <input type="text" id="plateInput" class="form-control" value="KA-01-XY-1234">
+        </div>
+
+        <button id="entryButton" class="btn btn-primary btn-lg">
+            Simulate Scan & Open Barrier
+        </button>
+        
+        <div id="messageArea" class="alert" role="alert" style="display: none; margin-top: 20px;">
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('entryButton').addEventListener('click', function() {
+        const plate = document.getElementById('plateInput').value;
+        const messageArea = document.getElementById('messageArea');
+        
+        // Show loading state
+        messageArea.style.display = 'block';
+        messageArea.className = 'alert alert-info';
+        messageArea.innerText = 'Scanning plate and opening barrier...';
+
+        // Send data to the backend /entry/simulate_entry endpoint
+        fetch('/entry/simulate_entry', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ plate: plate })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                // This is the "UI Update" for PLM-4
+                messageArea.className = 'alert alert-success';
+                messageArea.innerText = data.message; // "Barrier Opened for [plate]"
+            } else {
+                messageArea.className = 'alert alert-danger';
+                messageArea.innerText = 'Error: ' + data.message;
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            messageArea.className = 'alert alert-danger';
+            messageArea.innerText = 'A network error occurred.';
+        });
+    });
+</script>
+{% endblock %}

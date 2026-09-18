@@ -1,0 +1,11 @@
+Flask
+Werkzeug
+Jinja2
+itsdangerous
+
+pytest
+flake8
+python-dotenv
+
+reportlab      # For PDF receipts
+qrcode          # For QR code generation

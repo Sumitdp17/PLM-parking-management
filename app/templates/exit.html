@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Vehicle Exit & Payment</h2>
+<form method="POST">
+    <label>Enter Vehicle Number:</label>
+    <input type="text" name="plate" required>
+    <button type="submit">Generate Receipt</button>
+</form>
+{% endblock %}

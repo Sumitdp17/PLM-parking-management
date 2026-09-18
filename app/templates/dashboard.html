@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Admin Dashboard</h2>
+
+<div id="stats">
+    <p><strong>Occupied Slots:</strong> {{ occupied }}</p>
+    <p><strong>Free Slots:</strong> {{ free }}</p>
+</div>
+
+<!-- ✅ Add Maintenance Button -->
+<div style="margin-top: 20px;">
+    <a href="/maintenance" class="btn btn-secondary" style="padding: 8px 14px; text-decoration:none; background:#6c757d; color:white; border-radius:6px;">
+        🛠 Maintenance Logs
+    </a>
+</div>
+
+<script>
+setInterval(() => {
+    fetch("/dashboard/data")
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("stats").innerHTML = `
+            <p><strong>Occupied Slots:</strong> ${data.occupied}</p>
+            <p><strong>Free Slots:</strong> ${data.free}</p>
+        `;
+    })
+}, 5000);
+</script>
+{% endblock %}

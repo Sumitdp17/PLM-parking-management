@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔍 Validate Parking Receipt</h2>
+
+<p>Scan the QR code from the receipt and paste the scanned text below.</p>
+
+<form method="POST">
+    <label>QR Code Data:</label><br>
+    <input type="text" name="qr_text" required style="width: 300px; padding: 6px; margin-top: 8px;">
+    <br><br>
+    <button type="submit" class="btn btn-primary">Validate</button>
+</form>
+
+{% endblock %}

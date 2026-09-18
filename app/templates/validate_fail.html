@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 style="color: red;">❌ Invalid Receipt</h2>
+<p>The QR code data is missing or has been modified.</p>
+
+<a href="/validate" class="btn btn-secondary">Try Again</a>
+
+{% endblock %}

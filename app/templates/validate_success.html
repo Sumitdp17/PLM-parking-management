@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 style="color: green;">✅ Receipt Verified</h2>
+
+<p><strong>Vehicle:</strong> {{ plate }}</p>
+<p><strong>Hours Parked:</strong> {{ hours }} hour(s)</p>
+<p><strong>Amount Paid:</strong> ₹{{ amount }}</p>
+
+<a href="/validate" class="btn btn-secondary">Validate Another</a>
+
+{% endblock %}
