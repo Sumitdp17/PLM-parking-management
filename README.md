@@ -1,13 +1,6 @@
 # Automated Parking Management System
 
-**Project ID:** P21  
-**Course:** UE23CS341A  
-**Academic Year:** 2025  
-**Semester:** 5th Sem  
-**Campus:** RR  
-**Branch:** AIML  
-**Section:** D  
-**Team:** Tech Titans
+
 
 ## 📋 Project Description
 
@@ -15,21 +8,7 @@ A simulation of a smart parking system that manages vehicle entry/exit, payment 
 
 This repository contains the source code and documentation for the Automated Parking Management System project, developed as part of the UE23CS341A course at PES University.
 
-## 🧑‍💻 Development Team (Tech Titans)
 
-- [@PES1UG23AM195](https://github.com/PES1UG23AM195) - Scrum Master
-- [@PES1UG23AM191](https://github.com/PES1UG23AM191) - Developer Team
-- [@pes1ug23am212](https://github.com/pes1ug23am212) - Developer Team
-- [@PES1UG23AM209](https://github.com/PES1UG23AM209) - Developer Team
-
-## 👨‍🏫 Teaching Assistant
-
-- [@Amrutha-PES](https://github.com/Amrutha-PES)
-- [@VenomBlood1207](https://github.com/VenomBlood1207)
-
-## 👨‍⚖️ Faculty Supervisor
-
-- [@Arpitha035](https://github.com/Arpitha035)
 
 
 ## 🚀 Getting Started
@@ -40,8 +19,8 @@ This repository contains the source code and documentation for the Automated Par
 ### Installation
 1. Clone the repository
    ```bash
-   git clone https://github.com/pestechnology/PESU_RR_AIML_D_P21_Automated_Parking_Management_System_Tech-Titans.git
-   cd PESU_RR_AIML_D_P21_Automated_Parking_Management_System_Tech-Titans
+   git clone https://github.com/Sumitdp17/PLM-parking-management.git
+   
    ```
 
 2. Install dependencies
@@ -54,17 +33,8 @@ This repository contains the source code and documentation for the Automated Par
    # Add your run commands here
    ```
 
-## 📁 Project Structure
 
-```
-PESU_RR_AIML_D_P21_Automated_Parking_Management_System_Tech-Titans/
-├── src/                 # Source code
-├── docs/               # Documentation
-├── tests/              # Test files
-├── .github/            # GitHub workflows and templates
-├── README.md          # This file
-└── ...
-```
+
 
 ## 🛠️ Development Guidelines
 
